@@ -24,9 +24,21 @@ const fetchFunction: ExportedHandlerFetchHandler = async (request) => {
 	const flashCard: FlashCardInformation = {
 		name: "Stefan Lier",
 		headline: "Something Something Cloud & Architecture",
-		description: "Lorem Ipsum",
-		strengths: ["something"],
-		businesses: ["business2"],
+		description:
+			"I love building teams, applications and infrastructures - being the glue on the intersection of al three. " +
+			"Enabling companies and teams to build applications that can utilize DevOps principles and serve both the " +
+			"enduser and the developers continuing to improve them.",
+		techStrenghts: [
+			"Everything DevOps & Infrastructure",
+			"Cloud-Architecture",
+			"Cloud-Applications",
+			"Fullstack Development",
+		],
+		businesStrengths: [
+			"Building Products and Teams",
+			"Enabling Platform and DevOps Teams",
+			"Creating fully cloud-enabled Product Teams",
+		],
 	};
 
 	const responseConfiguration = {
