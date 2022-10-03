@@ -1,5 +1,7 @@
+import getPlainTextBody from "./plaintext";
+
 const DEFAULT_CONTENT_TYPE = "text/plain";
-const ALLOWED_ACCEPT_HEADERS = ["text/plain", "application/json"];
+const ALLOWED_ACCEPT_HEADERS = ["*/*", "text/plain", "application/json"];
 
 const fetchFunction: ExportedHandlerFetchHandler = async (request) => {
 	const contentType: string = request.headers.get("Accept")
@@ -36,20 +38,7 @@ const fetchFunction: ExportedHandlerFetchHandler = async (request) => {
 		return Response.json(flashCard, responseConfiguration);
 	}
 
-	return new Response(
-		`${flashCard.name}
-----
-${flashCard.description}
-----
-Strengths:
-${flashCard.strengths.map((strength) => ` * ${strength}`)}
-----
-Business:
-${flashCard.businesses.map((business) => ` * ${business}`)}
-----
-		`,
-		responseConfiguration
-	);
+	return new Response(getPlainTextBody(flashCard), responseConfiguration);
 };
 
 export default {
