@@ -23,6 +23,7 @@ const fetchFunction: ExportedHandlerFetchHandler = async (request) => {
 
 	const flashCard: FlashCardInformation = {
 		name: "Stefan Lier",
+		headline: "Something Something Cloud & Architecture",
 		description: "Lorem Ipsum",
 		strengths: ["something"],
 		businesses: ["business2"],

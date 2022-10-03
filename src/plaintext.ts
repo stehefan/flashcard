@@ -1,7 +1,8 @@
 const createBulletItem = (item: string) => `* ${item}`;
 
 const getPlainTextBody = (flashCard: FlashCardInformation) => {
-	return `**${flashCard.name}**
+	return `**${flashCard.name} - ${flashCard.headline}**
+
 > ${flashCard.description}
 
 Strengths:
