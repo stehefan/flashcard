@@ -6,10 +6,10 @@ const getPlainTextBody = (flashCard: FlashCardInformation) => {
 > ${flashCard.description}
 
 Strengths:
-${flashCard.techStrenghts.map(createBulletItem)}
+${flashCard.techStrenghts.map(createBulletItem).join("\n")}
 
 Business:
-${flashCard.businesStrengths.map(createBulletItem)}`;
+${flashCard.businesStrengths.map(createBulletItem).join("\n")}`;
 };
 
 export default getPlainTextBody;
